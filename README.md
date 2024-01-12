@@ -1,0 +1,1 @@
+MVC pattern, industry standard.
