@@ -46,7 +46,7 @@ def post_sale():
         )
 
         db.session.add(new_sale)
-        db.session.comit()
+        db.session.commit()
 
         new_sale_dict = new_sale.serialize()
         response = make_response(jsonify(new_sale_dict), 201)
