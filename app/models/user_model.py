@@ -15,7 +15,7 @@ class User(db.Model):
     # the backref parameter creates a virtual column ('owner') on the 'Car' model, allowing you to access the associated user from a car instance.
     cars = db.relationship('Car', backref='owner', lazy=True)
 
-    # Define a method to serialize the User model data
+    # Define a method to serialize the User model data/to_dict()
     # This method is useful for converting User instances into a format suitable for JSON serialization.
     def serialize(self):
         return {
